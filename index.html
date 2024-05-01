@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mèmes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Mèmes</h1>
+        <div class="upload-section">
+            <input type="file" id="image-upload" accept="image/*">
+        </div>
+        <div class="text-section">
+            <h2>Ajouter du texte</h2>
+            <textarea id="meme-text" placeholder="Ajoutez du texte ici"></textarea>
+            <label for="text-size">Taille du texte (px) :</label>
+            <input type="number" id="text-size" value="18" min="1" step="1">
+            <label for="text-color">Couleur du texte:</label>
+            <input type="color" id="text-color" value="#000000">
+            <label for="text-style">Style du texte:</label>
+            <select id="text-style">
+                <option value="normal">Normal</option>
+                <option value="bold">Gras</option>
+                <option value="italic">Italique</option>
+                <option value="underline">Souligné</option>
+            </select>
+            <label for="text-position">Position du texte:</label>
+            <select id="text-position">
+                <option value="top">En haut</option>
+                <option value="middle" selected>Au milieu</option>
+                <option value="bottom">En bas</option>
+            </select>
+        </div>
+        <div class="preview-section">
+            <h2>Aperçu</h2>
+            <div id="meme-preview" class="meme-preview"></div>
+            <button id="generate-btn">Générer Mème</button>
+            <button id="download-btn">Télécharger Mème</button>
+        </div>
+        <div class="gallery-section">
+            <h2>Galerie</h2>
+            <div id="meme-gallery" class="meme-gallery">
+                <!-- La galerie des mèmes précédemment créés sera affichée ici -->
+            </div>
+            <button id="clear-gallery-btn">Effacer la Galerie</button>
+        </div>
+        <div class="share-section">
+            <h2>Partager sur les réseaux sociaux</h2>
+            <button id="facebook-btn" class="social-btn">Partager sur Facebook</button>
+            <button id="twitter-btn" class="social-btn">Partager sur Twitter</button>
+            <button id="instagram-btn" class="social-btn">Partager sur Instagram</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
